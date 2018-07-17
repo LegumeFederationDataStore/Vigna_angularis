@@ -1,0 +1,59 @@
+identifier: 3Nz5
+
+provenance: The files in this directory originated from the Crop Genomics Lab of Dr. Suk-Ha Lee. That repository is considered primary repository and authoritative; files in this present directory are derived, and may have changes, as noted below. The files here are held as part of the LegumeInfo and LegumeFederation projects, and are made available here for the purpose of reproducibility of analyses at these sites (e.g. gene family alignments and phylogenies, genome browsers, etc.) and for further use by researchers, as that research extends other analyses at these project websites. If you are conducting research on large-scale data sets for this species, please consider retrieving the data from the primary repository. If you use the data in the present directory, please 1) please cite the data appropriately - generally referring to the original publications for this data; and if you make use of any significant modifications in the files (noted below under "Transformations" where applicable), then please also cite the respective database project(s) related to this directory.
+
+source: http://plantgenomics.snu.ac.kr
+
+subject: Directory of gene annotations, called on an assembly of pseudomolecules and remaining scaffold sequences
+
+related_to: See associated assembly files
+
+scientific_name: Vigna angularis
+
+taxid: 3914
+
+bioproject: PRJNA266852
+
+scientific_name_abbrev: vigan
+
+genotype: Gyeongwon, IT213134
+
+description: Gene annotations, on genome assembly
+
+dataset_doi: none
+
+genbank_accession: GCA_000465365.1
+
+original_file_creation_date: 2014-11-21
+
+local_file_creation_date: 2016-03-04
+
+publication_doi: 10.1038/srep08069
+
+dataset_release_date: 2016-03
+
+publication_title: Draft genome sequence of adzuki bean, Vigna angularis
+
+contributors: Yang Jae Kang, Dani Satyawan, Sangrea Shim, Taeyoung Lee, Jayern Lee, Won Joo Hwang, Sue K. Kim, Puji Lestari, Kularb Laosatit, Kil Hyun Kim, Tae Joung Ha, Annapurna Chitikineni, Moon Young Kim, Jong-Min Ko, Jae-Gyun Gwag, Jung-Kyung Moon, Yeong-Ho Lee, Beom-Seok Park, Rajeev K. Varshney & Suk-Ha Lee
+
+data_curators: Pooja Umale, Steven Cannon, Wei Huang, Andrew Farmer
+
+public_access_level: public
+
+license: Open
+
+keywords: 
+citations: Yang Jae Kang, Dani Satyawan, Sangrea Shim, Taeyoung Lee, Jayern Lee, Won Joo Hwang, Sue K. Kim, Puji Lestari, Kularb Laosatit, Kil Hyun Kim, Tae Joung Ha, Annapurna Chitikineni, Moon Young Kim, Jong-Min Ko, Jae-Gyun Gwag, Jung-Kyung Moon, Yeong-Ho Lee, Beom-Seok Park, Rajeev K. Varshney & Suk-Ha Lee (2015) Draft genome sequence of adzuki bean, Vigna angularis. Scientific Reports 5, Article number: 8069. doi:10.1038/srep08069
+
+file_transformation: 
+  - seqlen.awk vigan.Gyeongwon.a3.v1.cds.fa | perl -pe 's/(\w+\.\w+)\.(\d+) (\d+)/$1\t$2\t$3/' \
+  - | sort -k1,1 -k3nr,3nr | top_line.awk | awk '{print ">" $1 "." $2}' | sort > tmp.longest
+  - fasta_to_zero_lines.awk vigan.Gyeongwon.a3.v1.cds.fa | sort > tmp.fa.1ln
+  - join tmp.longest tmp.fa.1ln | perl -pe 's/ zqz /\n/' > vigan.Gyeongwon.gnm3.ann1.3Nz5c.cds_primaryTranscript.fna
+  - seqlen.awk vigan.Gyeongwon.a3.v1.peptide.fa | perl -pe 's/(\w+\.\w+)\.(\d+) (\d+)/$1\t$2\t$3/' \
+  - | sort -k1,1 -k3nr,3nr | top_line.awk | awk '{print ">" $1 "." $2}' | sort > tmp.longest
+  - fasta_to_zero_lines.awk vigan.Gyeongwon.a3.v1.peptide.fa | sort > tmp.fa.1ln
+  - join tmp.longest tmp.fa.1ln | perl -pe 's/ zqz /\n/' > vigan.Gyeongwon.gnm3.ann1.3Nz5f.protein_primaryTranscript.faa
+
+changes: 
+  - 2018-03-03 Added MANIFEST files
