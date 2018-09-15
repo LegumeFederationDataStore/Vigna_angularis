@@ -57,3 +57,4 @@ file_transformation:
 
 changes: 
   - 2018-03-03 Added MANIFEST files
+  - 2018-09-15 Changed fastas to include full prefixing (s/vigan/vigan.Gyeongwon.gnm3.ann1/)
