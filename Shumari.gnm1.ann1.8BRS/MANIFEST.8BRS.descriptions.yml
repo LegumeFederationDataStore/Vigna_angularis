@@ -1,0 +1,8 @@
+%YAML 1.2
+---
+# Name_in current_directory   description
+vigan.Shumari.gnm1.ann1.8BRS.gene_models_main.gff3.gz gene models
+vigan.Shumari.gnm1.ann1.8BRS.cds_primaryTranscript.fna.gz Coding sequence from primary transcript
+vigan.Shumari.gnm1.ann1.8BRS.transcript.fna.gz Transcript sequence
+vigan.Shumari.gnm1.ann1.8BRS.protein_primaryTranscript.faa.gz Protein sequence from primary transcript
+

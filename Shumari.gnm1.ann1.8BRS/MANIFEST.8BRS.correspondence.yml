@@ -1,0 +1,8 @@
+%YAML 1.2
+---
+# Name_in current_directory   previous_name
+vigan.Shumari.gnm1.ann1.8BRS.gene_models_main.gff3.gz Vangularis_v1.a1.gff.tar.gz
+vigan.Shumari.gnm1.ann1.8BRS.cds_primaryTranscript.fna.gz Vangularis_v1.a1.cds.fasta
+vigan.Shumari.gnm1.ann1.8BRS.transcript.fna.gz Vangularis_v1.a1.transcript.fasta
+vigan.Shumari.gnm1.ann1.8BRS.protein_primaryTranscript.faa.gz Vangularis_v1.a1.protein.fasta
+
