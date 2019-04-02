@@ -4,7 +4,7 @@ provenance: The files in this directory originated from http://viggs.dna.affrc.g
 
 source: http://viggs.dna.affrc.go.jp/
 
-subject: Vigna angularis accession Shumari genome annotation files; JGI annotation version 1 on assembly 4
+subject: Vigna angularis accession Shumari genome 
 
 related_to: none
 
@@ -57,4 +57,4 @@ file_transformation:
     
 changes: 
   - 2018-08-17 Initial preparation for Legume Federation data store.
-
+  - 2019-04-02 Change contents of "subject" field in README
